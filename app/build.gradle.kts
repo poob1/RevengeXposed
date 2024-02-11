@@ -12,9 +12,9 @@ android {
     defaultConfig {
         applicationId = "com.vendetta.xposed"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 8
-        versionName = "1.1.5"
+        versionName = "1.2.0"
     }
 
     buildTypes {
