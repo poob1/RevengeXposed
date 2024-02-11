@@ -264,7 +264,7 @@ class Main : IXposedHookZygoteInit, IXposedHookLoadPackage, IXposedHookInitPacka
         ).apply { isAccessible = true }
 
         cache = File(param.appInfo.dataDir, "cache").also { it.mkdirs() }
-        val vendetta = File(cache, "vendetta.js")
+        val vendetta = File(cache, "revenge.js")
         val etag = File(cache, "vendetta_etag.txt")
         val themeJs = File(cache, "vendetta_theme.js")
         val syscolorsJs = File(cache, "vendetta_syscolors.js")
@@ -363,7 +363,7 @@ class Main : IXposedHookZygoteInit, IXposedHookLoadPackage, IXposedHookInitPacka
                     Log.e("Vendetta", "Failed to setup fonts")
                 }
 
-                val url = if (config.customLoadUrl.enabled) config.customLoadUrl.url else "https://raw.githubusercontent.com/vendetta-mod/builds/master/vendetta.js"
+                val url = if (config.customLoadUrl.enabled) config.customLoadUrl.url else "https://raw.githubusercontent.com/revenge-mod/builds/main/revenge.js"
                 try {
                     val conn = URL(url).openConnection() as HttpURLConnection
                     conn.connectTimeout = 3000
