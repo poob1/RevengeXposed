@@ -124,14 +124,14 @@ class Main : IXposedHookZygoteInit, IXposedHookLoadPackage, IXposedHookInitPacka
         val lightTheme = param.classLoader.loadClass("com.discord.theme.LightTheme")
 
         val loadScriptFromAssets = catalystInstanceImpl.getDeclaredMethod(
-            "jniLoadScriptFromAssets",
+            "loadScriptFromAssets",
             AssetManager::class.java,
             String::class.java,
             Boolean::class.javaPrimitiveType
         )
 
         val loadScriptFromFile = catalystInstanceImpl.getDeclaredMethod(
-            "jniLoadScriptFromFile",
+            "loadScriptFromFile",
             String::class.java,
             String::class.java,
             Boolean::class.javaPrimitiveType
