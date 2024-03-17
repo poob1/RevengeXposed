@@ -10,7 +10,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.vendetta.xposed"
+        applicationId = "com.revenge.xposed"
         minSdk = 24
         targetSdk = 34
         versionCode = 8
@@ -31,7 +31,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    namespace = "com.vendetta.xposed"
+    namespace = "com.revenge.xposed"
 }
 
 dependencies {
