@@ -1,4 +1,4 @@
-package com.vendetta.xposed
+package com.revenge.xposed
 
 import android.app.AndroidAppHelper
 import android.content.Context
