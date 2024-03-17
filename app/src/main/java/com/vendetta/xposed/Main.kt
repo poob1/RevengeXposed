@@ -125,7 +125,7 @@ class Main : IXposedHookZygoteInit, IXposedHookLoadPackage, IXposedHookInitPacka
             try {
                 resparam.res.setReplacement("com.discord", "color", key, value)
             } catch (_: Exception) {
-                Log.i("Vendetta", "No color resource with $key")
+                Log.i("Revenge", "No color resource with $key")
             }
         }
     }
@@ -327,7 +327,7 @@ class Main : IXposedHookZygoteInit, IXposedHookLoadPackage, IXposedHookInitPacka
                 }
             }
         } catch (ex: Exception) {
-            Log.e("Vendetta", "Unable to find/parse theme", ex)
+            Log.e("Revenge", "Unable to find/parse theme", ex)
         }
 
         val patch = object : XC_MethodHook() {
@@ -360,7 +360,7 @@ class Main : IXposedHookZygoteInit, IXposedHookLoadPackage, IXposedHookInitPacka
                         }
                     }
                 }catch (e: Exception) {
-                    Log.e("Vendetta", "Failed to setup fonts")
+                    Log.e("Revenge", "Failed to setup fonts")
                 }
 
                 val url = if (config.customLoadUrl.enabled) config.customLoadUrl.url else "https://raw.githubusercontent.com/revenge-mod/builds/main/revenge.js"
@@ -384,7 +384,7 @@ class Main : IXposedHookZygoteInit, IXposedHookLoadPackage, IXposedHookInitPacka
                         if (header != null) etag.writeText(header)
                     }
                 } catch (e: Exception) {
-                    Log.e("Vendetta", "Failed to download Vendetta from $url")
+                    Log.e("Revenge", "Failed to download Revenge from $url")
                 }
 
                 XposedBridge.invokeOriginalMethod(loadScriptFromAssets, param.thisObject, arrayOf(modResources.assets, "assets://js/modules.js", true))
